@@ -69,32 +69,35 @@ v = 0
 e = 0
 p = 0
 while True:
-    n = int(input("Digite [1] para jogar ou digite [0] para finalizar: "))
-    if n == 1:
-        print("Beleza vamos jogar!!")
-        n = int(input("Digite [1] caso quiera 'Pedra', [2] caso queira 'Papel' ou [3] caso queira 'Tesoura': "))
+    try:
+        n = int(input("Digite [1] para jogar ou digite [0] para finalizar: "))
         if n == 1:
-            print("Vamos de pedra então!!")
-            contagem()
-            bot = random.randint(1, 3)
-            escolheu()
-            pedra()
-        elif n == 2:
-            print("Vamos de papel então!!")
-            contagem()
-            bot = random.randint(1, 3)
-            escolheu()
-            papel()
-        elif n == 3:
-            print("Vamos de tesoura então!!")
-            contagem()
-            bot = random.randint(1, 3)
-            escolheu()
-            tesoura()
+            print("Beleza vamos jogar!!")
+            n = int(input("Digite [1] caso queira 'Pedra', [2] caso queira 'Papel' ou [3] caso queira 'Tesoura': "))
+            if n == 1:
+                print("Vamos de pedra então!!")
+                contagem()
+                bot = random.randint(1, 3)
+                escolheu()
+                pedra()
+            elif n == 2:
+                print("Vamos de papel então!!")
+                contagem()
+                bot = random.randint(1, 3)
+                escolheu()
+                papel()
+            elif n == 3:
+                print("Vamos de tesoura então!!")
+                contagem()
+                bot = random.randint(1, 3)
+                escolheu()
+                tesoura()
+            else:
+                print("Valor invalido!")
+        elif n == 0:
+            break
         else:
-            print("Valor invalido!")
-    elif n == 0:
-        break
-    else:
+            print("Valor invalido!!")
+    except:
         print("Valor invalido!!")
 print(f"Você ganhou {v} vezes, perdeu {p} vezes e empatou {e} vezes!")
