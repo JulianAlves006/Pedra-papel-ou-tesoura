@@ -100,4 +100,5 @@ while True:
             print("Valor invalido!!")
     except:
         print("Valor invalido!!")
-print(f"Você ganhou {v} vezes, perdeu {p} vezes e empatou {e} vezes!")
+finaly:
+    print(f"Você ganhou {v} vezes, perdeu {p} vezes e empatou {e} vezes!")
